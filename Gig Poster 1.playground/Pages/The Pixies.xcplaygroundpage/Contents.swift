@@ -43,10 +43,21 @@ for y in stride(from: 0, to: 425, by: 40){
     
     for x in stride(from: 0, to: 425, by: 40){
         canvas.fillColor = limeGreen
-        canvas.drawEllipse(at: Point(x: x, y: y), width: 30, height: 30)
-
+        canvas.drawEllipse(at: Point(x: x, y: y), width: 35, height: 35)
     }
 }
+
+for y in stride(from: 40, to: 385, by: 40){
+
+    for x in stride(from: 40, to: 385, by: 40){
+        canvas.fillColor = offWhite
+        canvas.drawEllipse(at: Point(x: x, y:y), width: 35, height: 35)
+    }
+}
+
+canvas.drawText(message: "pixies", at: Point(x:10, y:415), size: 70, kerning: 0.0)
+
+
 /*:
  ## Use Source Control
  
