@@ -33,12 +33,15 @@ let limeGreen = Color(hue: 106, saturation: 64, brightness: 73, alpha: 100)
 canvas.drawShapesWithBorders = false
 canvas.drawShapesWithFill = true
 
+//Make backround green
 canvas.fillColor = limeGreen
 canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 
+//Add black square (background of the circles)
 canvas.fillColor = Color.black
 canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 400)
 
+//Add green circles
 for y in stride(from: 0, to: 425, by: 40){
     
     for x in stride(from: 0, to: 425, by: 40){
@@ -47,15 +50,43 @@ for y in stride(from: 0, to: 425, by: 40){
     }
 }
 
-for y in stride(from: 40, to: 385, by: 40){
+//for y in stride(from: 40, to: 385, by: 40){
+//
+//    for x in stride(from: 40, to: 385, by: 40){
+//        canvas.fillColor = offWhite
+//        canvas.drawEllipse(at: Point(x: x, y:y), width: 35, height: 35)
+//    }
+//}
 
-    for x in stride(from: 40, to: 385, by: 40){
-        canvas.fillColor = offWhite
-        canvas.drawEllipse(at: Point(x: x, y:y), width: 35, height: 35)
+var numberOfCircles = 1
+var yCoordinate = 40
+var xCoordinate = 425
+
+let blackText = ["saturday", "at the rat", "december 13 1986", "528 commonwealth", "9pm over 21", "boston, mass."]
+
+for _ in 0...9{
+    
+    for y in stride(from: 40, to: (yCoordinate), by: 40){
+    
+        for x in stride(from: 40, to: (xCoordinate), by: 40){
+            canvas.fillColor = offWhite
+            canvas.drawEllipse(at: Point(x: x, y:y), width: 35, height: 35)
+        }
     }
+yCoordinate += 40
+xCoordinate -= 40
+    
 }
 
+
 canvas.drawText(message: "pixies", at: Point(x:10, y:415), size: 70, kerning: 0.0)
+
+for y in stride(from: 10, to: 275, by: 265){
+    
+    for x in stride(from: 550, to: 525, by: 8.3 ){
+        canvas.drawText(message: (blackText), at: Point(x: x, y:y), size: 15, kerning: 0.0)
+    }
+}
 
 
 /*:
