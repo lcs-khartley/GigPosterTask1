@@ -30,7 +30,18 @@ let limeGreen = Color(hue: 106, saturation: 64, brightness: 73, alpha: 100)
 
 // Begin your solution here...
 
+canvas.drawShapesWithBorders = false
+canvas.drawShapesWithFill = true
 
+canvas.fillColor = limeGreen
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
+
+canvas.fillColor = Color.black
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 400)
+
+for x in stride(from: -5, to: 405, by: 10){
+    
+}
 /*:
  ## Use Source Control
  
